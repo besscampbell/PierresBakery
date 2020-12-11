@@ -18,7 +18,7 @@ namespace Bakery.Models
 
         public void AddLoaf()
         {
-            Loaves += 2;
+            Loaves += 1;
         }
     }
 }
