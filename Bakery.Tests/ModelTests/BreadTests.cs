@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
 using Bakery.Models;
 
 namespace Bakery.Tests
@@ -9,7 +11,7 @@ namespace Bakery.Tests
       [TestMethod]
       public void BreadConstructor_CreateInstancesOfWord_Bread()
       {
-          Bread breadOrder = new Bread(5)
+          Bread breadOrder = new Bread(5);
           Assert.AreEqual(typeof(Bread), breadOrder.GetType());
 
 
