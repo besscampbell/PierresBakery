@@ -22,7 +22,6 @@ namespace Bakery
             }
             Console.WriteLine("And how many pastries can I get you today?");
             string strPastries = Console.ReadLine();
-            // int numPastries = int.Parse(strPastries);
             Pastry pastryOrder = new Pastry(int.Parse(strPastries));
              if (pastryOrder.Pastries % 3 == 2)
             {
@@ -30,10 +29,9 @@ namespace Bakery
                 string anotherPastry = Console.ReadLine();
                 if (anotherPastry == "Y" || anotherPastry == "y")
                 {
-                    // numPastries += 1;
+                    pastryOrder.AddPastry();
                 }
             }
-            // Pastry pastryOrder = new Pastry(numPastries);
             breadOrder.TotalBread();
             pastryOrder.TotalPastries();
             Console.WriteLine($"So that's {breadOrder.Loaves} loaves for ${breadOrder.BreadTotal} and {pastryOrder.Pastries} pastries for ${pastryOrder.PastryTotal} your total comes to ${breadOrder.BreadTotal + pastryOrder.PastryTotal}. Thank you so much for visiting Pierre's!");
