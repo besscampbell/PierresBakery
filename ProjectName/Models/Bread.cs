@@ -14,7 +14,7 @@ namespace Bakery.Models
         {
             int remainder = (Loaves % 3);
             int freeLoaves = (Loaves - remainder)/3;
-            BreadTotal = (Loaves - freeLoaves) * 4;
+            BreadTotal = (Loaves - freeLoaves) * 5;
         }
     }
 }

@@ -1,0 +1,17 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Bakery.Models;
+
+namespace Bakery.Tests
+{
+    [TestClass]
+    public class PastryTests
+    {
+        [TestMethod]
+        public void PastryConstructor_CreateInstanceOfPastry_Pastry()
+        {
+            Pastry pastryOrder = new Pastry(3);
+            Assert.AreEqual(typeof(Pastry),pastryOrder.GetType());
+
+        }
+    }
+}
