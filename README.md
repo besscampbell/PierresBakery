@@ -10,13 +10,30 @@
 
 ## Setup/Installation Requirements
 
-1. Download this repository by clicking the "Clone or Download" button
-2. Navigate to the folder where it downloaded
-3. Now open your terminal and navigate to Bakery.Solution > Bakery.Tests
+### Software Requirements
+• A code editor like [VSCode](https://code.visualstudio.com/download)
+• With [.NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.106-macos-x64-installer) installed
+
+#### From the web
+1. Go to this [GitHub Repo Page](https://github.com/besscampbell/PierresBakery.git).
+2. Click the "Code" and click the 'Download zip' option.
+3. Unzip the file and navigate to Bakery.Solution > Bakery.Tests
 4. Type in `dotnet restore` to download necessary packages
 5. Then navigate to the ProjectName directory and type in `dotnet run` to run the application
-6. Congratulations, this is the program!
-7. To get your bakery total, follow along with the prompts
+6. To get your bakery total, follow along with the prompts
+
+--or--
+
+#### From Terminal
+
+1. Open a terminal in your code editor and type 
+: `https://github.com/besscampbell/PierresBakery.git`
+2. Navigate to the directory in the terminal (`cd Bakery.Solution`)
+3. Then type `code .` to open it up in VS Code and navigate to the Bakery.Tests directory `cd Bakery.Tests`
+4. Type in `dotnet restore` to download necessary packages
+5. Then navigate to the ProjectName directory and type in `dotnet run` to run the application
+6. To get your bakery total, follow along with the prompts
+
 
 
 ## Known Bugs
