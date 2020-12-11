@@ -12,8 +12,7 @@ namespace Bakery.Models
 
         public void TotalBread()
         {
-            int remainder = (Loaves % 3);
-            int freeLoaves = (Loaves - remainder)/3;
+            int freeLoaves = Loaves/3;
             BreadTotal = (Loaves - freeLoaves) * 5;
         }
     }
