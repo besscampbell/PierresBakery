@@ -20,10 +20,16 @@ namespace Bakery
                     breadOrder.AddLoaf();
                 }
             }
+            breadOrder.TotalBread(); 
+            if (breadOrder.Loaves >= 12)
+            {
+                breadOrder.AddLoaf();
+                Console.WriteLine("Thanks for being such a great customer! Here's a loaf on me!");
+            }
             Console.WriteLine("And how many pastries can I get you today?");
             string strPastries = Console.ReadLine();
             Pastry pastryOrder = new Pastry(int.Parse(strPastries));
-             if (pastryOrder.Pastries % 3 == 2)
+            if (pastryOrder.Pastries % 3 == 2)
             {
                 Console.WriteLine("Are you sure you wouldn't like to get one more pastry? It would cost only $1 more! If you would like to add another pastry press ['Y' for yes] or press ['Enter' for no].");
                 string anotherPastry = Console.ReadLine();
@@ -32,8 +38,12 @@ namespace Bakery
                     pastryOrder.AddPastry();
                 }
             }
-            breadOrder.TotalBread();
             pastryOrder.TotalPastries();
+            if (pastryOrder.Pastries >= 12)
+            {
+                pastryOrder.AddPastry();
+                Console.WriteLine("Thanks for being such a great customer! I threw and extra pastry in there for you!");
+            }
             Console.WriteLine($"So that's {breadOrder.Loaves} loa{(breadOrder.Loaves == 1 ? "f" : "ves")} for ${breadOrder.BreadTotal} and {pastryOrder.Pastries} pastr{(pastryOrder.Pastries == 1 ? "y" : "ies")} for ${pastryOrder.PastryTotal} your total comes to ${breadOrder.BreadTotal + pastryOrder.PastryTotal}. Thank you so much for visiting Pierre's!");
         }
     }
