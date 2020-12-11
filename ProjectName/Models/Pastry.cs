@@ -19,7 +19,7 @@ namespace Bakery.Models
 
         public void AddPastry()
         {
-            Pastries += 4;
+            Pastries += 1;
         }  
     }
 }
