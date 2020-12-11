@@ -12,6 +12,7 @@ namespace Bakery.Tests
           Bread breadOrder = new Bread(5);
           Assert.AreEqual(typeof(Bread), breadOrder.GetType());
       }
+
       [TestMethod]
       public void TotalBread_CalculatesBreadTotal_BreadTotal()
       {
@@ -23,7 +24,18 @@ namespace Bakery.Tests
           int result = 30;
           //Assert
           Assert.AreEqual(result, breadOrder.BreadTotal);
+      }
 
+      [TestMethod]
+      public void AddLoaf_AddsOneToLoafCount_Loaves()
+      {
+          //Arrange
+          Bread breadOrder = new Bread(5);
+          //Act
+          breadOrder.AddLoaf();
+          int result = 6;
+          //Assert
+          Assert.AreEqual(result, breadOrder.Loaves);
       }
     }
 }
