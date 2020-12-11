@@ -37,20 +37,5 @@ namespace Bakery.Tests
           //Assert
           Assert.AreEqual(result, breadOrder.Loaves);
       }
-
-      [TestMethod]
-      public void BakersDozen_ExtraLoafNoCost_Loaves()
-      {
-          //Arrange
-          Bread breadOrder = new Bread(12);
-          //Act
-          breadOrder.BakersDozen();
-          int endLoaves = 13;
-          int endTotal = 40;
-          //Assert
-          Assert.AreEqual(endLoaves, breadOrder.Loaves);
-          Assert.AreEqual(endTotal, breadOrder.BreadTotal);
-
-      }
     }
 }
