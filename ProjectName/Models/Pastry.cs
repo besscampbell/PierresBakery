@@ -2,7 +2,7 @@ namespace Bakery.Models
 {
     public class Pastry
     {
-        public int Pastries { get; }
+        public int Pastries { get; set; }
         public int PastryTotal { get; set; }
         public Pastry(int pastries)
         {
@@ -15,6 +15,11 @@ namespace Bakery.Models
             int discount = Pastries / 3;
             PastryTotal = (Pastries * 2) - discount;
 
+        }
+
+        public void AddPastry()
+        {
+            Pastries += 4;
         }  
     }
 }
