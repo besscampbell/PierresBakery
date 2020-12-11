@@ -18,12 +18,13 @@ namespace Bakery.Tests
       public void TotalBread_CalculatesBreadTotal_BreadTotal()
       {
           //Arrange
-          int loaves = 5
+          int loaves = 8;
           Bread breadOrder = new Bread(loaves);
           //Act
-          int result = breadOrder.TotalBread()
+          breadOrder.TotalBread();
+          int result = 30;
           //Assert
-          Assert.AreEqual(breadOrder.BreadTotal, result);
+          Assert.AreEqual(result, breadOrder.BreadTotal);
 
       }
     }
