@@ -13,5 +13,18 @@ namespace Bakery.Tests
             Assert.AreEqual(typeof(Pastry),pastryOrder.GetType());
 
         }
+
+        [TestMethod]
+        public void TotalPastry_CalculatesPastryTotal_PastryTotal()
+        {
+            //Arrange
+            int pastries = 6;
+            Pastry pastryOrder = new Pastry(pastries);
+            //Act
+            pastryOrder.TotalPastries();
+            int result = 10;
+            //Assert
+            Assert.AreEqual(result, pastryOrder.PastryTotal);
+        }
     }
 }
