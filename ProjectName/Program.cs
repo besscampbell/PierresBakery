@@ -34,7 +34,7 @@ namespace Bakery
             }
             breadOrder.TotalBread();
             pastryOrder.TotalPastries();
-            Console.WriteLine($"So that's {breadOrder.Loaves} loaves for ${breadOrder.BreadTotal} and {pastryOrder.Pastries} pastries for ${pastryOrder.PastryTotal} your total comes to ${breadOrder.BreadTotal + pastryOrder.PastryTotal}. Thank you so much for visiting Pierre's!");
+            Console.WriteLine($"So that's {breadOrder.Loaves} loa{(breadOrder.Loaves == 1 ? "f" : "ves")} for ${breadOrder.BreadTotal} and {pastryOrder.Pastries} pastr{(pastryOrder.Pastries == 1 ? "y" : "ies")} for ${pastryOrder.PastryTotal} your total comes to ${breadOrder.BreadTotal + pastryOrder.PastryTotal}. Thank you so much for visiting Pierre's!");
         }
     }
 }
