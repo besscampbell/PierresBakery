@@ -38,7 +38,7 @@
 
 ## Known Bugs
 
-Issue with Project folder. When looking for Bakery path it will instead be found under ProjectName.
+No known bugs.
 
 ## Support and contact details
 
