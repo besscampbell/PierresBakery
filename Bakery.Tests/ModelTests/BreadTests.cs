@@ -17,11 +17,11 @@ namespace Bakery.Tests
       public void TotalBread_CalculatesBreadTotal_BreadTotal()
       {
           //Arrange
-          int loaves = 8;
+          int loaves = 5;
           Bread breadOrder = new Bread(loaves);
           //Act
           breadOrder.TotalBread();
-          int result = 30;
+          int result = 20;
           //Assert
           Assert.AreEqual(result, breadOrder.BreadTotal);
       }
@@ -70,6 +70,21 @@ namespace Bakery.Tests
       {
           //Arrange
           int loaves = 9;
+          Bread breadOrder = new Bread(loaves);
+          //Act
+          breadOrder.TotalBread();
+          int result = 30;
+          //Assert
+          Assert.AreEqual(result, breadOrder.BreadTotal); 
+      }
+
+      //Multiple of 3 vs Multiple of 2 same price difference is in the loaves. Prompt customer to get one more for free
+
+       [TestMethod]
+      public void TotalBread_MultiplesOfTwo_BreadTotal()
+      {
+          //Arrange
+          int loaves = 8;
           Bread breadOrder = new Bread(loaves);
           //Act
           breadOrder.TotalBread();
