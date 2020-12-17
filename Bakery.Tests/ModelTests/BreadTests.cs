@@ -64,5 +64,18 @@ namespace Bakery.Tests
           //Assert
           Assert.AreEqual(result, breadOrder.BreadTotal);  
       }
+
+      [TestMethod]
+      public void TotalBread_MultiplesOfThree_BreadTotal()
+      {
+          //Arrange
+          int loaves = 9;
+          Bread breadOrder = new Bread(loaves);
+          //Act
+          breadOrder.TotalBread();
+          int result = 30;
+          //Assert
+          Assert.AreEqual(result, breadOrder.BreadTotal); 
+      }
     }
 }
