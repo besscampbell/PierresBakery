@@ -64,5 +64,18 @@ namespace Bakery.Tests
             //Assert
             Assert.AreEqual(result, pastryOrder.PastryTotal);
         }
+
+        [TestMethod]
+        public void PastryTotal_MultipleOfTwo_PastryTotal()
+        {
+            //Arrange
+            int pastries = 8;
+            Pastry pastryOrder = new Pastry(pastries);
+            //Act
+            pastryOrder.TotalPastries();
+            int result = 14;
+            //Assert
+            Assert.AreEqual(result, pastryOrder.PastryTotal);
+        }
     }
 }
