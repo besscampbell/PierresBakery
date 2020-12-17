@@ -77,5 +77,20 @@ namespace Bakery.Tests
             //Assert
             Assert.AreEqual(result, pastryOrder.PastryTotal);
         }
+
+        //Multiple of 2 vs Multiple of 3 only $1 more for one more pastry, selling point
+
+         [TestMethod]
+        public void PastryTotal_MultipleOfThree_PastryTotal()
+        {
+            //Arrange
+            int pastries = 9;
+            Pastry pastryOrder = new Pastry(pastries);
+            //Act
+            pastryOrder.TotalPastries();
+            int result = 15;
+            //Assert
+            Assert.AreEqual(result, pastryOrder.PastryTotal);
+        }
     }
 }
