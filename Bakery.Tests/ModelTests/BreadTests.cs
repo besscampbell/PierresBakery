@@ -51,5 +51,18 @@ namespace Bakery.Tests
           //Assert
           Assert.AreEqual(result, breadOrder.BreadTotal); 
       }
+
+      [TestMethod]
+      public void TotalBread_CalculatesLargeOrders_BreadTotal()
+      {
+         //Arrange
+          int loaves = 34;
+          Bread breadOrder = new Bread(loaves);
+          //Act
+          breadOrder.TotalBread();
+          int result = 115;
+          //Assert
+          Assert.AreEqual(result, breadOrder.BreadTotal);  
+      }
     }
 }
