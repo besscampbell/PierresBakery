@@ -51,5 +51,18 @@ namespace Bakery.Tests
             //Assert
             Assert.AreEqual(result, pastryOrder.PastryTotal);
         }
+
+        [TestMethod]
+        public void PastryTotal_CalculatesLargeOrder_PastryTotal()
+        {
+            //Arrange
+            int pastries = 76;
+            Pastry pastryOrder = new Pastry(pastries);
+            //Act
+            pastryOrder.TotalPastries();
+            int result = 127;
+            //Assert
+            Assert.AreEqual(result, pastryOrder.PastryTotal);
+        }
     }
 }
