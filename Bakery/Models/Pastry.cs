@@ -13,7 +13,7 @@ namespace Bakery.Models
         public void TotalPastries()
         {
             int discount = Pastries / 3;
-            PastryTotal = (Pastries * 1) - discount;
+            PastryTotal = (Pastries * 2) - discount;
 
         }
 
