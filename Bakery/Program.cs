@@ -44,7 +44,16 @@ namespace Bakery
                 pastryOrder.AddPastry();
                 Console.WriteLine("Thanks for being such a great customer! I threw and extra pastry in there for you!");
             }
-            Console.WriteLine($"So that's {breadOrder.Loaves} loa{(breadOrder.Loaves == 1 ? "f" : "ves")} for ${breadOrder.BreadTotal} and {pastryOrder.Pastries} pastr{(pastryOrder.Pastries == 1 ? "y" : "ies")} for ${pastryOrder.PastryTotal} your total comes to ${breadOrder.BreadTotal + pastryOrder.PastryTotal}. Thank you so much for visiting Pierre's!");
+            Console.WriteLine($"So that's {breadOrder.Loaves} loa{(breadOrder.Loaves == 1 ? "f" : "ves")} for ${breadOrder.BreadTotal} and {pastryOrder.Pastries} pastr{(pastryOrder.Pastries == 1 ? "y" : "ies")} for ${pastryOrder.PastryTotal} your total comes to ${breadOrder.BreadTotal + pastryOrder.PastryTotal}. Is that all for you today? Press ['Y' for yes] or press ['Enter' for no].");
+            string finalQuestion = Console.ReadLine();
+            if (finalQuestion == "Y" || finalQuestion == "y")
+            {
+                Console.WriteLine("Thank you so much for visiting Pierre's! We look forward to your next visit!");
+            }
+            else
+            {
+                Main();
+            }
         }
     }
 }
